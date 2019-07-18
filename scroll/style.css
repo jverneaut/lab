@@ -13,11 +13,14 @@ body {
 
 .header,
 .footer {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 40px;
   width: 100%;
   content: '';
   background: #223344;
+  color: white;
 }
 
 .content {
