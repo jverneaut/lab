@@ -37,6 +37,10 @@ body {
   opacity: 1;
 }
 
+.full-screen .item a {
+  color: rgb(43, 196, 133); 
+}
+
 .indicator {
   text-align: right;
   width: 320px;
@@ -45,7 +49,7 @@ body {
   top: 50%;
   position: absolute;
   transform: translateY(-50%);
-  color: rgb(43, 196, 133)
+  color: rgb(43, 196, 133);
 }
 
 .indicator::before {
