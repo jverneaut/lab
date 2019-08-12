@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  background: hsl(240, 8%, 15%);
+  font-family: system-ui;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.info {
+  color: white;
+}
+
+.counter {
+  margin-left: 40px;
+  display: inline-flex;
+  padding: 0 4px;
+  border-radius: 24px;
+  height: 48px;
+  background: hsl(240, 5%, 20%);
+}
+
+.counter-el {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  width: 40px;
+  height: 48px;
+  position: relative;
+}
+
+.counter-el + .counter-el .counter-el__value::after {
+  content: '+';
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+  top: 27px;
+  color: hsl(240, 5%, 38%);
+}
+
+.counter-el__display {
+  background: hsl(240, 8%, 15%);
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.counter-el__display-fill {
+  width: 8px;
+  height: 8px;
+  content: '';
+  display: block;
+  background: hsl(174, 100%, 66%);
+  opacity: 0;
+  transition: 0s;
+}
+
+.counter-el__value {
+  color: hsl(240, 1%, 65%);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+@keyframes appear {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+.counter-el:nth-child(8) .counter-el__display-fill {
+  animation: appear 0.8s step-end infinite;
+}
+
+.counter-el:nth-child(7) .counter-el__display-fill {
+  animation: appear 1.6s step-end infinite;
+}
+
+.counter-el:nth-child(6) .counter-el__display-fill {
+  animation: appear 3.2s step-end infinite;
+}
+
+.counter-el:nth-child(5) .counter-el__display-fill {
+  animation: appear 6.4s step-end infinite;
+}
+
+.counter-el:nth-child(4) .counter-el__display-fill {
+  animation: appear 12.8s step-end infinite;
+}
+
+.counter-el:nth-child(3) .counter-el__display-fill {
+  animation: appear 25.6s step-end infinite;
+}
+
+.counter-el:nth-child(2) .counter-el__display-fill {
+  animation: appear 51.2s step-end infinite;
+}
+
+.counter-el:nth-child(1) .counter-el__display-fill {
+  animation: appear 102.4s step-end infinite;
+}
+
+.result {
+  height: 16px;
+  overflow: hidden;
+  margin-left: 24px;
+}
+
+.result::before {
+  content: '=';
+  color: hsl(240, 1%, 65%);
+}
+
+@keyframes counter {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-3200px); }
+}
+
+.result__numbers {
+  font-size: 0;
+  text-align: right;
+  width: 40px;
+  animation: counter 76.8s steps(192, start) infinite;
+}
+
+.result__number {
+  font-size: 14px;
+  color: white;
+}

@@ -6,10 +6,12 @@
   "dependencies": {
     "parcel-bundler": "^1.12.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "sass": "^1.22.9"
+  },
   "scripts": {
-    "start": "parcel index.html fixed-scroll-anim/index.html scroll/index.html",
-    "build": "parcel build index.html fixed-scroll-anim/index.html scroll/index.html"
+    "start": "parcel index.html fixed-scroll-anim/index.html scroll/index.html binary/index.html",
+    "build": "parcel build index.html fixed-scroll-anim/index.html scroll/index.html binary/index.html"
   },
   "repository": {
     "type": "git",
