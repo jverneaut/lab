@@ -3,7 +3,6 @@ body {
 }
 
 .title {
-  color: white;
   font-family: sans-serif;
   margin: 0 auto;
   display: block;
@@ -15,7 +14,7 @@ body {
   top: 50vh;
   width: 100%;
   transform: translate(-50%, -50%);
-  color: rgb(37, 45, 68);
+  color: #243156;
 }
 
 .title a {
