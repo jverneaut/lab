@@ -18,6 +18,12 @@ body {
   color: rgb(37, 45, 68);
 }
 
+.title a {
+  color: rgb(93, 134, 255);
+  font-size: 14px;
+  font-weight: 300;
+}
+
 .box {
   display: block;
   height: 160px;
