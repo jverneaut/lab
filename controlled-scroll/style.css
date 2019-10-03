@@ -98,8 +98,8 @@ img {
   transform: translate(-50%, -50%);
   animation: noise 0.26s infinite;
   animation-timing-function: steps(1, end);
-  mix-blend-mode: multiply;
-  opacity: 0.12;
+  mix-blend-mode: difference;
+  opacity: 0.15;
 }
 
 .wrapper {
