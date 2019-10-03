@@ -1,6 +1,8 @@
 const wrapper = document.querySelector('.wrapper');
 
 let scroll = 0;
+let mouseX = 0;
+let mouseY = 0;
 let { height } = wrapper.getBoundingClientRect();
 
 const setWrapperDim = () => {
@@ -14,6 +16,11 @@ window.onresize = () => {
   setWrapperDim();
 }
 
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
 setWrapperDim();
 
 wrapper.style.position =  'fixed';
@@ -23,9 +30,28 @@ window.onscroll = () => {
 }
 
 let scrollLerp = scroll;
+let mouseXLerp1 = mouseX;
+let mouseYLerp1 = mouseY;
+let mouseXLerp2 = mouseX;
+let mouseYLerp2 = mouseY;
+
+const mouse1 = document.querySelector('.mouse-1');
+const mouse2 = document.querySelector('.mouse-2');
+
 const animate = () => {
-  scrollLerp += 0.1 * (scroll - scrollLerp)
+  scrollLerp += 0.1 * (scroll - scrollLerp);
   wrapper.style.top = -scrollLerp + 'px';
+
+  mouseXLerp1 += 0.3 * (mouseX - mouseXLerp1);
+  mouseYLerp1 += 0.3 * (mouseY - mouseYLerp1);
+  mouse1.style.left = mouseXLerp1 + 'px';
+  mouse1.style.top = mouseYLerp1 + 'px';
+
+
+  mouseXLerp2 += 0.2 * (mouseXLerp1 - mouseXLerp2);
+  mouseYLerp2 += 0.2 * (mouseYLerp1 - mouseYLerp2);
+  mouse2.style.left = mouseXLerp2 + 'px';
+  mouse2.style.top = mouseYLerp2 + 'px';
 
   requestAnimationFrame(animate);
 }
