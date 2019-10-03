@@ -10,8 +10,8 @@
     "sass": "^1.22.9"
   },
   "scripts": {
-    "start": "parcel index.html fixed-scroll-anim/index.html scroll/index.html binary/index.html intersection-observer/index.html",
-    "build": "parcel build index.html fixed-scroll-anim/index.html scroll/index.html binary/index.html intersection-observer/index.html"
+    "start": "parcel index.html fixed-scroll-anim/index.html scroll/index.html binary/index.html intersection-observer/index.html controlled-scroll/index.html",
+    "build": "parcel build index.html fixed-scroll-anim/index.html scroll/index.html binary/index.html intersection-observer/index.html controlled-scroll/index.html"
   },
   "repository": {
     "type": "git",
