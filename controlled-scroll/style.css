@@ -9,10 +9,13 @@ body {
     black 32px,
     black 33px,
     rgb(233, 224, 210) 33px);
+
+  cursor: none;
 }
 
-body {
-  cursor: none;
+*::selection {
+  background: black;
+  color: rgb(233, 224, 210);
 }
 
 .mouse-1 {
