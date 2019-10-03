@@ -15,6 +15,11 @@ body {
   cursor: none;
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 *::selection {
   background: black;
   color: rgb(233, 224, 210);
@@ -99,7 +104,7 @@ img {
   animation: noise 0.26s infinite;
   animation-timing-function: steps(1, end);
   mix-blend-mode: difference;
-  opacity: 0.15;
+  opacity: 0.13;
 }
 
 .wrapper {
