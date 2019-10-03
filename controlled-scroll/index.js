@@ -73,7 +73,19 @@ const intersectionObserver = new IntersectionObserver((entries, observer) => {
   rootMargin: '0px',
 });
 
-images.forEach(box => {
-  intersectionObserver.observe(box);
+let selected = -1;
+images.forEach((image, index) => {
+  intersectionObserver.observe(image);
+
+  image.addEventListener('mouseover', () => {
+    selected = index;
+    mouse2.classList.add('mouse-2--big');
+  });
+
+  image.addEventListener('mouseout', () => {
+    if (selected === index) {
+      mouse2.classList.remove('mouse-2--big');
+    }
+  });
 });
 
