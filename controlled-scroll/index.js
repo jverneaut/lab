@@ -63,6 +63,7 @@ const intersectionObserver = new IntersectionObserver(
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.style.opacity = 2 * (entry.intersectionRatio - 0.5);
+        entry.target.style.filter = 'contrast(0.5) grayscale(100%) sepia(0.2)';
       }
     });
   },

@@ -60,7 +60,6 @@ p {
 }
 
 img {
-  filter: contrast(0.5) grayscale(100%) sepia(0.2);
   width: 100%;
 }
 
@@ -71,19 +70,19 @@ img {
 
 @keyframes noise {
   0% {
-    transform: translate(calc(-50% + 80px), calc(-50% - 40px));
+    transform: translate(calc(-50% + 30px), calc(-50% - 40px));
   }
   25% {
-    transform: translate(calc(-50% + 24px), calc(-50% - 40px));
+    transform: translate(calc(-50% + 24px), calc(-50% - 15px));
   }
   50% {
-    transform: translate(calc(-50% - 15px), calc(-50% + 80px));
+    transform: translate(calc(-50% - 15px), calc(-50% + 5px));
   }
   75% {
-    transform: translate(calc(-50% + 25px), calc(-50% - 32px));
+    transform: translate(calc(-50% + 25px), calc(-50% - 1px));
   }
   100% {
-    transform: translate(calc(-50% - 50px), calc(-50% + 40px));
+    transform: translate(calc(-50% - 50px), calc(-50% + 20px));
   }
 }
 
@@ -99,8 +98,8 @@ img {
   transform: translate(-50%, -50%);
   animation: noise 0.26s infinite;
   animation-timing-function: steps(1, end);
-  mix-blend-mode: overlay;
-  opacity: 0.07;
+  mix-blend-mode: multiply;
+  opacity: 0.12;
 }
 
 .wrapper {
