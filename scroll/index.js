@@ -14,7 +14,7 @@ webkitOverflowScrolling.addEventListener('change', () => {
 
 const setHeight = () => {
   body.style.height = window.innerHeight + 'px';
-}
+};
 
 vhJavascript.addEventListener('change', () => {
   if (vhJavascript.checked) {

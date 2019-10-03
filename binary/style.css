@@ -65,8 +65,12 @@ body {
 }
 
 @keyframes appear {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 .counter-el:nth-child(8) .counter-el__display-fill {
@@ -113,8 +117,12 @@ body {
 }
 
 @keyframes counter {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-3200px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-3200px);
+  }
 }
 
 .result__numbers {

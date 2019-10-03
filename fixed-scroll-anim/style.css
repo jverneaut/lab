@@ -15,7 +15,7 @@ body {
   flex-direction: column;
   background: rgb(40, 48, 53);
   color: white;
-  width: 100%;  
+  width: 100%;
 }
 
 .full-screen.fixed {
@@ -38,7 +38,7 @@ body {
 }
 
 .full-screen .item a {
-  color: rgb(43, 196, 133); 
+  color: rgb(43, 196, 133);
 }
 
 .indicator {

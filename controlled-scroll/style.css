@@ -3,12 +3,14 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   background: rgb(233, 224, 210);
-  background: linear-gradient(90deg,
+  background: linear-gradient(
+    90deg,
     rgb(233, 224, 210) 0%,
     rgb(233, 224, 210) 32px,
     black 32px,
     black 33px,
-    rgb(233, 224, 210) 33px);
+    rgb(233, 224, 210) 33px
+  );
 
   cursor: none;
 }
@@ -161,7 +163,6 @@ p:nth-of-type(7) {
   grid-column-end: 7;
 }
 
-
 p:nth-of-type(8) {
   grid-column-start: 2;
   grid-column-end: 5;
@@ -171,7 +172,6 @@ p:nth-of-type(8) {
   grid-column-start: 5;
   grid-column-end: 7;
 }
-
 
 p:nth-of-type(9) {
   grid-column-start: 1;
