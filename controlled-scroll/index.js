@@ -39,16 +39,16 @@ const mouse1 = document.querySelector('.mouse-1');
 const mouse2 = document.querySelector('.mouse-2');
 
 const animate = () => {
-  scrollLerp += 0.1 * (scroll - scrollLerp);
-  wrapper.style.transform = `translateY(${-scrollLerp}px)`;
+  scrollLerp += Math.floor(0.1 * (scroll - scrollLerp));
+  wrapper.style.transform = `translate3d(0, ${-scrollLerp}px, 0)`;
 
-  mouseXLerp1 += 0.3 * (mouseX - mouseXLerp1);
-  mouseYLerp1 += 0.3 * (mouseY - mouseYLerp1);
-  mouse1.style.transform = `translate(calc(-50% + ${mouseXLerp1}px), calc(-50% + ${mouseYLerp1}px))`;
+  mouseXLerp1 += Math.floor(0.3 * (mouseX - mouseXLerp1));
+  mouseYLerp1 += Math.floor(0.3 * (mouseY - mouseYLerp1));
+  mouse1.style.transform = `translate3d(calc(-50% + ${mouseXLerp1}px), calc(-50% + ${mouseYLerp1}px), 0)`;
 
-  mouseXLerp2 += 0.2 * (mouseXLerp1 - mouseXLerp2);
-  mouseYLerp2 += 0.2 * (mouseYLerp1 - mouseYLerp2);
-  mouse2.style.transform = `translate(calc(-50% + ${mouseXLerp2}px), calc(-50% + ${mouseYLerp2}px))`;
+  mouseXLerp2 += Math.floor(0.2 * (mouseXLerp1 - mouseXLerp2));
+  mouseYLerp2 += Math.floor(0.2 * (mouseYLerp1 - mouseYLerp2));
+  mouse2.style.transform = `translate3d(calc(-50% + ${mouseXLerp2}px), calc(-50% + ${mouseYLerp2}px), 0)`;
 
   requestAnimationFrame(animate);
 };
