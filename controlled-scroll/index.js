@@ -40,17 +40,15 @@ const mouse2 = document.querySelector('.mouse-2');
 
 const animate = () => {
   scrollLerp += 0.1 * (scroll - scrollLerp);
-  wrapper.style.top = -scrollLerp + 'px';
+  wrapper.style.transform = `translateY(${-scrollLerp}px)`;
 
   mouseXLerp1 += 0.3 * (mouseX - mouseXLerp1);
   mouseYLerp1 += 0.3 * (mouseY - mouseYLerp1);
-  mouse1.style.left = mouseXLerp1 + 'px';
-  mouse1.style.top = mouseYLerp1 + 'px';
+  mouse1.style.transform = `translate(calc(-50% + ${mouseXLerp1}px), calc(-50% + ${mouseYLerp1}px))`;
 
   mouseXLerp2 += 0.2 * (mouseXLerp1 - mouseXLerp2);
   mouseYLerp2 += 0.2 * (mouseYLerp1 - mouseYLerp2);
-  mouse2.style.left = mouseXLerp2 + 'px';
-  mouse2.style.top = mouseYLerp2 + 'px';
+  mouse2.style.transform = `translate(calc(-50% + ${mouseXLerp2}px), calc(-50% + ${mouseYLerp2}px))`;
 
   requestAnimationFrame(animate);
 };
