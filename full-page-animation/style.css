@@ -1,0 +1,147 @@
+body {
+  font-family: 'Lora', serif;
+  background: rgb(35, 79, 92);
+}
+
+.list {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.list-titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s all;
+}
+
+.list-titles a {
+  font-size: 56px;
+  color: white;
+  opacity: 0.4;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s all;
+}
+
+.list-titles a.active {
+  opacity: 1;
+  color: white;
+}
+
+.list-titles a + a {
+  margin-top: 32px;
+}
+
+.detail-img,
+.list-imgs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s all;
+}
+
+.list-imgs-mask {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  height: 60vh;
+  width: 30vh;
+  overflow: hidden;
+  transition: 0.3s all;
+}
+
+.list-imgs img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 110%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  opacity: 0;
+  transition: 0.3s all;
+}
+
+.detail-img img,
+.list-imgs img.active {
+  opacity: 0.5;
+}
+
+.detail-img,
+.list.full .list-imgs-mask {
+  width: 50%;
+  left: 25%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.detail-img img,
+.list.full img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.list.full .list-titles {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.detail-text {
+  width: 50%;
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  padding: 120px 40px;
+  box-sizing: border-box;
+}
+
+.detail-text h1 {
+  font-size: 56px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.detail-text p {
+  line-height: 1.5;
+  margin-top: 24px;
+  opacity: 0.6;
+}
+
+.detail-back {
+  background: white;
+  left: 40px;
+  top: 40px;
+  display: block;
+  position: absolute;
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-back svg {
+  margin-left: -4px;
+}

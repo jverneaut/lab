@@ -5,14 +5,18 @@
   "main": "index.js",
   "dependencies": {
     "parcel-bundler": "^1.12.3",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
+    "react-router-dom": "^5.1.2",
+    "react-transition-group": "^4.3.0",
     "three": "^0.109.0"
   },
   "devDependencies": {
     "sass": "^1.22.9"
   },
   "scripts": {
-    "start": "parcel index.html fixed-scroll-anim/index.html scroll/index.html binary/index.html intersection-observer/index.html controlled-scroll/index.html scroll-snapping/index.html web-vr/index.html",
-    "build": "parcel build index.html fixed-scroll-anim/index.html scroll/index.html binary/index.html intersection-observer/index.html controlled-scroll/index.html scroll-snapping/index.html web-vr/index.html"
+    "start": "parcel index.html fixed-scroll-anim/index.html scroll/index.html binary/index.html intersection-observer/index.html controlled-scroll/index.html scroll-snapping/index.html web-vr/index.html full-page-animation/index.html",
+    "build": "parcel build index.html fixed-scroll-anim/index.html scroll/index.html binary/index.html intersection-observer/index.html controlled-scroll/index.html scroll-snapping/index.html web-vr/index.html full-page-animation/index.html"
   },
   "repository": {
     "type": "git",
