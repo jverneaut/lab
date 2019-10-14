@@ -9,7 +9,6 @@ const setWrapperDim = () => {
   const dims = wrapper.getBoundingClientRect();
   width = dims.width;
   height = dims.height;
-  document.body.style.height = height + 'px';
 };
 
 window.onresize = () => {
@@ -25,8 +24,10 @@ setWrapperDim();
 
 wrapper.style.position = 'fixed';
 
-window.onscroll = () => {
-  scroll = window.scrollY;
+document.onwheel = e => {
+  scroll += e.deltaY;
+  scroll = Math.max(0, scroll);
+  scroll = Math.min(scroll, height - window.innerHeight);
 };
 
 let scrollLerp = scroll;

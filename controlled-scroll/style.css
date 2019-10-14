@@ -12,6 +12,8 @@ body {
     rgb(233, 224, 210) 33px
   );
 
+  height: 100vh;
+  overflow: hidden;
   cursor: none;
 }
 
@@ -110,6 +112,7 @@ img {
 .wrapper {
   width: 100%;
   padding: 40px;
+  box-sizing: border-box;
 }
 
 .grid {
