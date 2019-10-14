@@ -54,16 +54,7 @@ const Detail = ({ item }) => {
             className="detail-text"
           >
             <h1>{item.name}</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
-              accusamus sunt voluptates autem doloribus magni.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores
-              libero minima corrupti at tenetur in cupiditate quia fugiat
-              deserunt blanditiis illo commodi eligendi, accusamus veniam
-              distinctio deleniti reprehenderit, voluptates officiis. Ullam?
-            </p>
+            <p>{item.description}</p>
           </div>
         )}
       </Transition>
