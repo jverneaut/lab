@@ -27,7 +27,7 @@ const items = [
 ];
 
 const App = () => (
-  <Router>
+  <Router basename="/full-page-animation">
     <Switch>
       {items.map(item => (
         <Route path={'/' + item.slug} key={item.name}>
