@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Helmet from 'react-helmet';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import List from './components/List';
@@ -28,6 +29,9 @@ const items = [
 
 const App = () => (
   <Router basename="/full-page-animation">
+    <Helmet>
+      <title>Vacances</title>
+    </Helmet>
     <Switch>
       {items.map(item => (
         <Route path={'/' + item.slug} key={item.name}>
