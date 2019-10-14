@@ -18,6 +18,12 @@ const items = [
     slug: 'la-montagne',
     index: 1,
   },
+  {
+    name: 'La campagne',
+    src: 'https://picsum.photos/id/19/1200/1200',
+    slug: 'la-campagne',
+    index: 2,
+  },
 ];
 
 const App = () => (

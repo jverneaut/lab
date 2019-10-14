@@ -1,4 +1,5 @@
 import React from 'react';
+import Helmet from 'react-helmet';
 import { Link, useHistory } from 'react-router-dom';
 import { Transition } from 'react-transition-group';
 
@@ -37,6 +38,9 @@ const Detail = ({ item }) => {
 
   return (
     <div className="detail">
+      <Helmet>
+        <title>{item.name}</title>
+      </Helmet>
       <div className="detail-img">
         <img src={item.src} alt="" />
       </div>
