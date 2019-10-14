@@ -7,15 +7,15 @@ import Detail from './components/Detail';
 
 const items = [
   {
-    name: 'La mer',
-    src: 'https://picsum.photos/id/37/1200/1200',
-    slug: 'la-mer',
-    index: 0,
-  },
-  {
     name: 'La montagne',
     src: 'https://picsum.photos/id/235/1200/1200',
     slug: 'la-montagne',
+    index: 0,
+  },
+  {
+    name: 'La mer',
+    src: 'https://picsum.photos/id/37/1200/1200',
+    slug: 'la-mer',
     index: 1,
   },
   {
