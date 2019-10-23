@@ -4,7 +4,7 @@ import { createShader, createProgram, createTexture } from './utils';
 
 const RESOLUTION = 2;
 
-const MESH_WIDTH_SEGMENTS_NUMBER = 10;
+const MESH_WIDTH_SEGMENTS_NUMBER = 40;
 const MESH_HEIGHT_SEGMENTS_NUMBER = 16;
 
 const images = document.querySelectorAll('img');
@@ -93,7 +93,15 @@ gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(textureCoords), gl.STATIC_DRAW);
 gl.enableVertexAttribArray(texcoordAttributeLocation);
 gl.vertexAttribPointer(texcoordAttributeLocation, 2, gl.FLOAT, false, 0, 0);
 
+let time = 0;
+
+const mouseLocationUniform = gl.getUniformLocation(program, 'u_time');
+gl.uniform1f(mouseLocationUniform, time);
+
 const draw = () => {
+  time += 1;
+  gl.uniform1f(mouseLocationUniform, time);
+
   images.forEach((image, index) => {
     // First we get the image position relative to the canvas
     const { left, right, top, bottom } = image.getBoundingClientRect();
