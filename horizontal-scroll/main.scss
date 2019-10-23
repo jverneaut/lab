@@ -1,0 +1,71 @@
+@import 'reset.css';
+
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.items {
+  display: flex;
+  height: 100vh;
+  position: fixed;
+}
+
+.item {
+  height: 100%;
+  width: 33.33vw;
+  overflow: hidden;
+  display: block;
+  position: relative;
+}
+
+.item img {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.item div {
+  position: absolute;
+  color: white;
+  bottom: 0;
+  margin: 56px 40px;
+  margin-bottom: 40px;
+  width: calc(100% - 80px);
+  box-sizing: border-box;
+  transition: 0.5s all;
+  overflow: hidden;
+}
+
+.item p {
+  margin-top: 16px;
+  max-height: 0;
+  transition: 0.8s all;
+  max-width: 400px;
+  opacity: 0;
+  transform-origin: top left;
+  transform: rotate(8deg);
+}
+
+.item:hover div {
+  margin-bottom: 56px;
+}
+
+.item:hover p {
+  max-height: 120px;
+  opacity: 1;
+  transform: rotate(0);
+}
