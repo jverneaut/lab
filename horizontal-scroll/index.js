@@ -15,7 +15,9 @@ window.onresize = () => {
   windowWidth = window.innerWidth;
 };
 
-document.addEventListener('wheel', e => {
+itemsContainer.addEventListener('wheel', e => {
+  e.preventDefault();
+
   const delta = e.deltaX + e.deltaY;
   actualScroll = clamp(actualScroll + delta, 0, containerWidth - windowWidth);
 });
