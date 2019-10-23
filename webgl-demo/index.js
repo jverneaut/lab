@@ -4,8 +4,8 @@ import { createShader, createProgram, createTexture } from './utils';
 
 const RESOLUTION = 2;
 
-const MESH_WIDTH_SEGMENTS_NUMBER = 80;
-const MESH_HEIGHT_SEGMENTS_NUMBER = 20;
+const MESH_WIDTH_SEGMENTS_NUMBER = 10;
+const MESH_HEIGHT_SEGMENTS_NUMBER = 16;
 
 const images = document.querySelectorAll('img');
 images.forEach(image => {
