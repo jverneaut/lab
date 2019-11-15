@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'BandeinsStrangeVariableGX';
+  src: url('BandeinsStrangeVariableGX.ttf');
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'BandeinsStrangeVariableGX';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: rgb(85, 0, 255);
+}
+
+@keyframes text-anim {
+  0% {
+    font-variation-settings: 'wdth' 100;
+  }
+  50% {
+    font-variation-settings: 'wdth' 800;
+  }
+  100% {
+    font-variation-settings: 'wdth' 100;
+  }
+}
+
+.container {
+  position: fixed;
+  top: 25%;
+  left: 12%;
+}
+
+.container div {
+  white-space: nowrap;
+}
+
+.container h1 {
+  transition: 0.6s;
+  animation: text-anim 2s infinite;
+  white-space: nowrap;
+  font-size: 140px;
+  will-change: font-variaton-settings;
+}
+
+.container span {
+  color: rgb(112, 127, 255);
+}
+
+.container h1:first-of-type span:first-of-type {
+  color: rgb(56, 255, 195);
+}
