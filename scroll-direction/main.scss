@@ -9,7 +9,6 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: hsla(350, 100%, 50%, 1);
 }
 
 section h2 {
@@ -29,4 +28,5 @@ section h2 span {
 body {
   height: 100vh;
   overflow: hidden;
+  background: hsla(350, 100%, 50%, 1);
 }
