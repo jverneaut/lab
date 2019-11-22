@@ -201,20 +201,7 @@
         xmlns="http://www.w3.org/2000/svg"
         preserveAspectRatio="none"
       >
-        <defs>
-          <filter id="drop-shadow">
-            <feGaussianBlur in="SourceAlpha" stdDeviation="2" />
-            <feOffset dx="0" dy="1" result="offsetblur" />
-            <feFlood flood-color="#000000" flood-opacity="0.5" />
-            <feComposite in2="offsetblur" operator="in" />
-            <feMerge>
-              <feMergeNode />
-              <feMergeNode in="SourceGraphic" />
-            </feMerge>
-          </filter>
-        </defs>
         <path
-          filter="url(#drop-shadow)"
           d="M16,0 C74,75 244,189 261,105 C278,21 37,200 19,160 C1,120 306,247 302,204 C298,161 2.84217094e-14,350 2.84217094e-14,285 C2.84217094e-14,220 173,340 195,400"
           id="Path"
         ></path>
