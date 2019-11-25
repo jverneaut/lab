@@ -25,7 +25,7 @@ const startY = Math.random() * height;
 
 const points = [
   ...[{ x2: startX, y2: startY }],
-  ...new Array(Math.floor(Math.random() * 100))
+  ...new Array(Math.floor(Math.random() * 20))
     .fill(0)
     .map(() => ({ x2: Math.random() * width, y2: Math.random() * height })),
 ];
