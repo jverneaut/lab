@@ -22,8 +22,8 @@
     "sass": "^1.22.9"
   },
   "scripts": {
-    "start": "parcel index.html fixed-scroll-anim/index.html scroll/index.html binary/index.html intersection-observer/index.html controlled-scroll/index.html scroll-snapping/index.html web-vr/index.html full-page-animation/index.html webgl-image/index.html horizontal-scroll/index.html aiguilles-de-buffon/index.html webgl-demo/index.html canvas-texture/index.html variable-font/index.html scroll-direction/index.html ruban/index.html",
-    "build": "parcel build index.html fixed-scroll-anim/index.html scroll/index.html binary/index.html intersection-observer/index.html controlled-scroll/index.html scroll-snapping/index.html web-vr/index.html full-page-animation/index.html webgl-image/index.html horizontal-scroll/index.html aiguilles-de-buffon/index.html webgl-demo/index.html canvas-texture/index.html variable-font/index.html scroll-direction/index.html ruban/index.html"
+    "start": "parcel index.html fixed-scroll-anim/index.html scroll/index.html binary/index.html intersection-observer/index.html controlled-scroll/index.html scroll-snapping/index.html web-vr/index.html full-page-animation/index.html webgl-image/index.html horizontal-scroll/index.html aiguilles-de-buffon/index.html webgl-demo/index.html canvas-texture/index.html variable-font/index.html scroll-direction/index.html ruban/index.html picasso/index.html",
+    "build": "parcel build index.html fixed-scroll-anim/index.html scroll/index.html binary/index.html intersection-observer/index.html controlled-scroll/index.html scroll-snapping/index.html web-vr/index.html full-page-animation/index.html webgl-image/index.html horizontal-scroll/index.html aiguilles-de-buffon/index.html webgl-demo/index.html canvas-texture/index.html variable-font/index.html scroll-direction/index.html ruban/index.html picasso/index.html"
   },
   "repository": {
     "type": "git",
