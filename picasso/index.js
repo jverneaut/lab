@@ -23,31 +23,22 @@ const OFFSET = 10 + Math.random() * 20;
 const startX = Math.random() * width;
 const startY = Math.random() * height;
 
-const points = [{ x2: startX, y2: startY }];
+const points = [
+  ...[{ x2: startX, y2: startY }],
+  ...new Array(Math.floor(Math.random() * 100))
+    .fill(0)
+    .map(() => ({ x2: Math.random() * width, y2: Math.random() * height })),
+];
 
-const draw = () => {
-  const path = points
-    .map((point, index) =>
-      index === 0
-        ? { x1: startX, y1: startY, ...point }
-        : { x1: points[index - 1].x2, y1: points[index - 1].y2, ...point }
-    )
-    .map((point, index) =>
-      curvedPath(point.x1, point.y1, point.x2, point.y2, OFFSET * (index % 2 === 0 ? -1 : 1))
-    )
-    .join(' ');
+const path = points
+  .map((point, index) =>
+    index === 0
+      ? { x1: startX, y1: startY, ...point }
+      : { x1: points[index - 1].x2, y1: points[index - 1].y2, ...point }
+  )
+  .map((point, index) =>
+    curvedPath(point.x1, point.y1, point.x2, point.y2, OFFSET * (index % 2 === 0 ? -1 : 1))
+  )
+  .join(' ');
 
-  svg.innerHTML = `<path d="M${startX} ${startY} ${path}" stroke-width="2" stroke="black" fill="transparent"></path>`;
-  requestAnimationFrame(draw);
-};
-
-draw();
-
-window.addEventListener('mousemove', e => {
-  points[points.length - 1].x2 = e.clientX;
-  points[points.length - 1].y2 = e.clientY;
-});
-
-window.addEventListener('mousedown', e => {
-  points.push({ x2: e.clientX, y2: e.clientY });
-});
+svg.innerHTML = `<path d="M${startX} ${startY} ${path}" stroke-width="2" stroke="black" fill="transparent"></path>`;
