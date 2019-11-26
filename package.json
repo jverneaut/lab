@@ -5,13 +5,15 @@
   "main": "index.js",
   "dependencies": {
     "glslify-bundle": "^5.1.1",
-    "parcel-bundler": "^1.12.3",
+    "lottie-web": "^5.5.10",
+    "parcel-bundler": "^1.12.4",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-helmet": "^5.2.1",
     "react-router-dom": "^5.1.2",
     "react-transition-group": "^4.3.0",
     "reset.css": "^2.0.2",
+    "rxjs": "^6.5.3",
     "three": "^0.109.0"
   },
   "browserslist": [
@@ -22,8 +24,8 @@
     "sass": "^1.22.9"
   },
   "scripts": {
-    "start": "parcel index.html fixed-scroll-anim/index.html scroll/index.html binary/index.html intersection-observer/index.html controlled-scroll/index.html scroll-snapping/index.html web-vr/index.html full-page-animation/index.html webgl-image/index.html horizontal-scroll/index.html aiguilles-de-buffon/index.html webgl-demo/index.html canvas-texture/index.html variable-font/index.html scroll-direction/index.html ruban/index.html picasso/index.html",
-    "build": "parcel build index.html fixed-scroll-anim/index.html scroll/index.html binary/index.html intersection-observer/index.html controlled-scroll/index.html scroll-snapping/index.html web-vr/index.html full-page-animation/index.html webgl-image/index.html horizontal-scroll/index.html aiguilles-de-buffon/index.html webgl-demo/index.html canvas-texture/index.html variable-font/index.html scroll-direction/index.html ruban/index.html picasso/index.html"
+    "start": "parcel index.html fixed-scroll-anim/index.html scroll/index.html binary/index.html intersection-observer/index.html controlled-scroll/index.html scroll-snapping/index.html web-vr/index.html full-page-animation/index.html webgl-image/index.html horizontal-scroll/index.html aiguilles-de-buffon/index.html webgl-demo/index.html canvas-texture/index.html variable-font/index.html scroll-direction/index.html ruban/index.html picasso/index.html lottie/index.html",
+    "build": "parcel build index.html fixed-scroll-anim/index.html scroll/index.html binary/index.html intersection-observer/index.html controlled-scroll/index.html scroll-snapping/index.html web-vr/index.html full-page-animation/index.html webgl-image/index.html horizontal-scroll/index.html aiguilles-de-buffon/index.html webgl-demo/index.html canvas-texture/index.html variable-font/index.html scroll-direction/index.html ruban/index.html picasso/index.html lottie/index.html"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  background: blue;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+main {
+  background: white;
+  height: 200vh;
+}
+
+div {
+  /* position: fixed; */
+  position: absolute;
+  top: 100vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+
+  height: 200vh;
+}
