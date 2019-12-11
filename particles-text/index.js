@@ -62,14 +62,14 @@ const createParticles = () => {
     }
   }
 
-  for (let i = 0; i < positions.length * 0.1; i++) {
+  for (let i = 0; i < positions.length * 0.13; i++) {
     const pos = positions[Math.floor(Math.random() * positions.length)];
     const rotation = Math.random() * Math.PI * 2;
     const timeMultiplicator = Math.sin(Math.random() * Math.PI * 2);
     const offsetMulitplicator =
-      Math.random() < 0.1
-        ? 4 * Math.sin(Math.random() * Math.PI * 2)
-        : Math.sin(Math.random() * Math.PI * 2);
+      Math.random() < 0.14
+        ? 3 * Math.sin(Math.random() * Math.PI * 2)
+        : 1.02 * Math.sin(Math.random() * Math.PI * 2);
 
     particles.push({
       x: pos.x,
@@ -91,21 +91,29 @@ text.subscribe(value => {
 
 const OFFSET = width / 200;
 
+const mouse = [];
+document.addEventListener('mousemove', e => {
+  mouse[0] = e.clientX * 1.5;
+  mouse[1] = e.clientY * 1.5;
+});
+
 let time = 0;
 const anim = () => {
   clear();
 
   particles.forEach(particle => {
     const offsetX = Math.sin(particle.rotation + 0.02 * time * particle.timeMultiplicator);
-    const offsetY = Math.cos(particle.rotation + 2 * 0.02 * time * particle.timeMultiplicator);
+    const offsetY = Math.cos(
+      particle.rotation + 1.5 * 0.02 * time * particle.timeMultiplicator
+    );
 
     context.beginPath();
     context.fillStyle = particle.color;
     context.fillRect(
       particle.x + offsetX * OFFSET * particle.offsetMulitplicator,
       particle.y + offsetY * OFFSET * particle.offsetMulitplicator,
-      width / 1000,
-      width / 1000
+      width / 1100,
+      width / 1100
     );
   });
 
