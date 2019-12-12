@@ -27,6 +27,9 @@ for (let i = 0; i < 10000; i++) {
 }
 
 const starsMaterial = new THREE.PointsMaterial({ color: 0xffffff });
+var texture = new THREE.TextureLoader().load(require('./circle.png'));
+
+starsMaterial.map = texture;
 
 const starField = new THREE.Points(starsGeometry, starsMaterial);
 
