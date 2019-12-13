@@ -14,7 +14,7 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth * SCALE, window.innerHeight * SCALE, false);
 renderer.shadowMap.enabled = false;
 
-document.body.appendChild(renderer.domElement);
+document.querySelector('.particles').appendChild(renderer.domElement);
 
 const starsGeometry = new THREE.Geometry();
 for (let i = 0; i < 10000; i++) {
@@ -33,18 +33,24 @@ starsMaterial.map = texture;
 
 const starField = new THREE.Points(starsGeometry, starsMaterial);
 
-starField.position.z = -500;
+starField.position.z = -600;
 
 scene.add(starField);
 
 let mousePos = [window.innerWidth / 2, window.innerHeight / 2];
+let scroll = window.scrollY;
+
+let rotation = { x: 0, y: 0, z: 0 };
 
 const update = () => {
+  rotation.x += 0.0004 + 0.002 * 2 * (mousePos[1] / window.innerHeight - 0.5);
+  rotation.y += 0.0005 + 0.002 * 2 * (mousePos[0] / window.innerWidth - 0.5);
+  rotation.z += 0.0004;
+
   starField.rotation.x =
-    starField.rotation.x + 0.0003 + 0.001 * 2 * (mousePos[1] / window.innerHeight - 0.5);
-  starField.rotation.y =
-    starField.rotation.y + 0.0005 + 0.001 * 2 * (mousePos[0] / window.innerWidth - 0.5);
-  starField.rotation.z += 0.0003;
+    rotation.x - (0.2 * (scroll - window.innerHeight)) / window.innerHeight;
+  starField.rotation.y = rotation.y;
+  starField.rotation.z = rotation.z;
 };
 
 renderer.setAnimationLoop(() => {
@@ -55,4 +61,8 @@ renderer.setAnimationLoop(() => {
 document.addEventListener('mousemove', e => {
   mousePos[0] = e.clientX;
   mousePos[1] = e.clientY;
+});
+
+document.addEventListener('scroll', () => {
+  scroll = window.scrollY;
 });
