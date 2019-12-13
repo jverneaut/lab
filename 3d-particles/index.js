@@ -44,7 +44,7 @@ let rotation = { x: 0, y: 0, z: 0 };
 
 const update = () => {
   rotation.x += 0.0004 + 0.002 * 2 * (mousePos[1] / window.innerHeight - 0.5);
-  rotation.y += 0.0005 + 0.002 * 2 * (mousePos[0] / window.innerWidth - 0.5);
+  rotation.y += 0.001 + 0.002 * 2 * (mousePos[0] / window.innerWidth - 0.5);
   rotation.z += 0.0004;
 
   starField.rotation.x =
