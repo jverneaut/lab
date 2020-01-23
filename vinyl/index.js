@@ -97,12 +97,11 @@ const anim = () => {
   for (let i = 0; i < sharedImgDatas.length; i++) {
     let rotation = Math.min(0, ((time * 12) % 5000) - i * (5000 / 17));
     rotation = (rotation * Math.PI) / 180;
-    // rotation *= i % 2 === 0 ? 1 : -1;
 
     tempCtx.clearRect(0, 0, W, H);
     tempCtx.putImageData(sharedImgDatas[i], 0, H / 2 - imgDataHeight / 2);
     ctx.translate(W / 6, H / 2);
-    ctx.rotate(rotation);
+    ctx.rotate(-rotation);
     ctx.translate(-W / 6, -H / 2);
     ctx.drawImage(temp, 0, 0);
     ctx.setTransform(1, 0, 0, 1, 0, 0);
